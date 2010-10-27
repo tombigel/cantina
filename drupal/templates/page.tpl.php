@@ -21,8 +21,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=2">
-  <link rel="stylesheet" href="css/grid-rtl.css?v=2">
+  <!-- <link rel="stylesheet" href="css/style.css?v=2"> -->
+  <!-- <link rel="stylesheet" href="css/grid-rtl.css?v=2"> -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-1.6.min.js"></script>
@@ -35,6 +35,19 @@
 
     <header class="region clearfix">
         <nav class="block grid_10 alpha">
+			 <?php print theme('links__system_main_menu', array(
+		          'links' => $main_menu,
+		          'attributes' => array(
+		            'id' => 'main-menu-links',
+		            'class' => array('links', 'clearfix'),
+		          ),
+		          'heading' => array(
+		            'text' => t('Main menu'),
+		            'level' => 'h2',
+		            'class' => array('element-invisible'),
+		          ),
+		        )); ?>
+		<!--
             <ul>
                 <li><a href="#">בית</a></li>
                 <li><a href="#">לינק</a></li>
@@ -42,6 +55,7 @@
                 <li><a href="#">לינק</a></li>
                 <li><a href="#">לינק</a></li>
             </ul>
+-->
         </nav>
         <div id="login" class="block grid_2 omega">
             <a href="#">כניסה</a>
@@ -51,6 +65,7 @@
     <div id="main" class="clearfix">
 
         <section id="content-intro" class="region clearfix">
+			
             <div class="block grid_8 alpha">
                 <p>טקסט</p>
                 <h2>סלוגן</h2>
@@ -60,39 +75,35 @@
             </div>
         </section>
 
-        <section id="content-crousel" class="region clearfix">
-            <div class="block grid_12 alpha omega">
-                <div id="carousel">
-                    <ul>
-                        <li class="grid_12"><a href="#">אודות - נמל</a></li>
-                        <li class="grid_12"><a href="#">קרן</a></li>
-                        <li class="grid_12"><a href="#">ציונות</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    
 
-        <section id="content-main" class="region grid_7 alpha">
+        <section id="content-main" class="region container_12">
             <div class="node">
-                תכנים מקודמים
+region: content
+   <?php print render($page['content']); ?>              
+  
             </div>
         </section>
 
-        <section id="content-social" class="region grid_5 omega">
-            <div class="block">
-                רשתות חברתיות
-            </div>
-        </section>
 
     </div>
 
     <footer class="clearfix region">
         <div class="block grid_7 alpha">
             ניווט תחתון וקופי
+			  <?php print render($page['footer_firstcolumn']); ?>
+		        <?php print render($page['footer_secondcolumn']); ?>
+		        <?php print render($page['footer_thirdcolumn']); ?>
+		        <?php print render($page['footer_fourthcolumn']); ?>
         </div>
         <div class="block grid_5 omega">
             לוגואים
-        </div>
+		 <?php if ($page['footer']): ?>
+		      <div id="footer" class="clearfix">
+		        <?php print render($page['footer']); ?>
+		      </div> <!-- /#footer -->
+		    <?php endif; ?>        
+</div>
     </footer>
   </div> <!--! end of #container -->
 
