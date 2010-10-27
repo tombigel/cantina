@@ -210,15 +210,14 @@ button {  width: auto; overflow: visible; }
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
 
-/* Navigation menus */
-
-nav li{display:inline-block;padding:0 .5em}
-
-
 
  /* Primary Styles
     Author: Tom Bigelajzen
  */
+
+/* Navigation menus */
+nav li{display:inline-block;padding:0 .5em}
+
 
 .block{border:1px solid #f00;padding:20px 0;}
 .node{border:1px solid #00f;padding:20px 0;}
@@ -228,16 +227,6 @@ nav li{display:inline-block;padding:0 .5em}
 #carousel{overflow:hidden;}
 #carousel ul{width:2880px;}
 #carousel li{float:right;margin:0;}
-
-
-
-
-
-
-
-
-
-
 
 
 /*
