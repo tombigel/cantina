@@ -2,11 +2,14 @@
 
 */
 
-//Init Application
+/**
+ * Init function, what goes here runs on page load
+ */
 function init(){
     //Initiate the carousel
     doCarousel('#carousel ul', 3000, 4000, 4000);
 }
+
 /**
  * Cycle through elements
  * @param element
@@ -21,7 +24,7 @@ function init(){
 function doCarousel(element, duration, delay, initial_delay){
 
     if (!initial_delay) {
-        // Get all sots
+        // Get all slots
         var slots = $(element).children();
         // Get the distance for the animation from the visible element
         var distance = slots.first().width();
