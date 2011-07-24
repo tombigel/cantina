@@ -252,10 +252,10 @@ nav a{display:block;padding:5px;}
 /* Intro */
 #content-intro{background:#444;-moz-box-shadow:inset -30px -30px 150px 60px #222;-webkit-box-shadow:inset 10px -30px 120px 40px #222;box-shadow:inset 10px -30px 120px 40px #222; }
 #content-intro p,
-#content-intro h2{font-family:HadasimCLM, 'Arial Hebrew', Arial, sans-serif;letter-spacing: -.5pt;color:#fff;text-shadow:1px 1px 4px #000;padding-right:25px;}
+#content-intro h2{font-family:HadasimCLM, 'Arial Hebrew', Arial, sans-serif; color:#fff;text-shadow:1px 1px 4px #000;padding-right:25px;}
 
-#content-intro p{font-size:2.133em;padding-top:.6em;padding-bottom:.6em;text-align:justify; letter-spacing: -.8pt; }
-#content-intro h2{font-size:3em;font-weight:bold;letter-spacing: -1.6pt; }
+#content-intro p{font-size:2.133em;padding-top:.6em;padding-bottom:.6em;text-align:justify; letter-spacing: -.4pt; }
+#content-intro h2{font-size:3em;font-weight:bold;letter-spacing: -1pt; }
 
 /* Logo */
 #logo-video a{display:block;width:370px;height:275px;background:url(../images/logo.png) no-repeat 0 0;}
